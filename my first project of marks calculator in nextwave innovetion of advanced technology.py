@@ -1,24 +1,62 @@
-Python 3.14.6 (tags/v3.14.6:c63aec6, Jun 10 2026, 10:26:10) [MSC v.1944 64 bit (AMD64)] on win32
-Enter "help" below or click "Help" above for more information.
->>> 
-============== RESTART: C:/Users/PRAJWAL SHETTY J/prajjushetty.py ==============
-       STUDENT GRADE CALCULATOR
-Enter student name: prajwal
-Enter English marks: 45
-Enter Maths marks: 45
-Enter Gen AI marks: 85
-Enter Aptitude marks: 85
-Enter Back End marks: 85
-Enter Front End marks: 85
-             STUDENT RESULT
-Student Name : prajwal
-English      : 45.0
-Maths        : 45.0
-Gen AI       : 85.0
-Aptitude     : 85.0
-Back End     : 85.0
-Front End    : 85.0
-Total Marks  : 430.0 / 600
-Percentage   : 71.66666666666667 %
-Grade        : B
-Result       : PASS
+
+#       STUDENT GRADE CALCULATOR
+
+
+print("       STUDENT GRADE CALCULATOR")
+
+
+# Student details
+name = input("Enter student name: ")
+
+# Enter marks
+english = float(input("Enter English marks: "))
+maths = float(input("Enter Maths marks: "))
+gen_ai = float(input("Enter Gen AI marks: "))
+aptitude = float(input("Enter Aptitude marks: "))
+back_end = float(input("Enter Back End marks: "))
+front_end = float(input("Enter Front End marks: "))
+
+# Calculate total
+total = english + maths + gen_ai + aptitude + back_end + front_end
+
+# Calculate percentage
+percentage = total / 6
+
+# Calculate grade
+if percentage >= 90:
+    grade = "A+"
+elif percentage >= 80:
+    grade = "A"
+elif percentage >= 70:
+    grade = "B"
+elif percentage >= 60:
+    grade = "C"
+elif percentage >= 50:
+    grade = "D"
+else:
+    grade = "F"
+
+# Calculate result
+if percentage >= 40:
+    result = "PASS"
+else:
+    result = "FAIL"
+
+# Display result
+
+print("             STUDENT RESULT")
+
+
+print("Student Name :", name)
+
+print("English      :", english)
+print("Maths        :", maths)
+print("Gen AI       :", gen_ai)
+print("Aptitude     :", aptitude)
+print("Back End     :", back_end)
+print("Front End    :", front_end)
+
+print("Total Marks  :", total, "/ 600")
+print("Percentage   :", percentage, "%")
+print("Grade        :", grade)
+print("Result       :", result)
